@@ -1,0 +1,18 @@
+{
+  "asi": true,
+  "curly": true,
+  "forin": true,
+  "globalstrict": true,
+  "latedef": true,
+  "maxcomplexity": 4,
+  "nocomma": true,
+  "nonbsp": true,
+  "shadow": "outer",
+  "unused": true,
+
+  "node": true, // for the build-script
+  "browser": true, // for the injector script
+  "globals": {
+    "angular": false
+  }
+}

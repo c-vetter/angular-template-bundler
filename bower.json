@@ -1,0 +1,21 @@
+{
+  "name": "angular-template-bundler",
+  "version": "0.0.0",
+  "authors": [
+    "Christian Vetter <christian@rasenplanscher.info>"
+  ],
+  "description": "Get your initial view rendered and load all other templates at once",
+  "main": "./template-bundler.js",
+  "ignore": [
+    ".jshintrc"
+  ],
+  "keywords": [
+    "angular",
+    "template",
+    "bundle",
+    "batch",
+    "aggregate"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/rasenplanscher/angular-template-bundler"
+}
