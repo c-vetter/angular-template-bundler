@@ -28,7 +28,7 @@ Make your templates available as a single JSON file. In order to make that simpl
 #### Using the build script
 First, you need to `npm install async` (or, better yet, put `async` in your `package.json` as a dependency), then simply go to your app directory and execute `build-template-bundle.js`:
 
-```
+```sh
 node bower_components/angular-template-bundler/build-template-bundle.js
 ```
 
