@@ -1,0 +1,221 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4,
+p, blockquote, pre, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+strong {
+    font-weight: 400;
+}
+
+
+
+/**
+ * Basic styling
+ */
+body {
+    font-family: $base-font-family;
+    line-height: $base-line-height;
+    font-weight: 300;
+    color: $text-color;
+    background-color: $background-color;
+    -webkit-text-size-adjust: 100%;
+}
+
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+p, blockquote, pre, ul, ol,
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+h1 {
+    margin-bottom: ($spacing-unit / $h1-font-size / 2) * 1em;
+}
+h2 {
+    margin-bottom: ($spacing-unit / $h2-font-size / 2) * 1em;
+}
+h3 {
+    margin-bottom: ($spacing-unit / $h3-font-size / 2) * 1em;
+}
+h4 {
+    margin-bottom: ($spacing-unit / $h4-font-size / 2) * 1em;
+}
+
+
+
+/**
+ * Images
+ */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+
+
+/**
+ * Figures
+ */
+figure > img {
+    display: block;
+}
+
+
+
+/**
+ * Lists
+ */
+ul, ol {
+    margin-left: $spacing-unit;
+}
+
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4 {
+    color: $heading-color;
+    font-weight: 400;
+}
+h1 {
+    font-size: $h1-font-size;
+}
+h2 {
+    font-size: $h2-font-size;
+}
+h3 {
+    font-size: $h3-font-size;
+}
+h4 {
+    font-size: $h4-font-size;
+}
+
+
+
+/**
+ * Links
+ */
+a {
+    color: $link-color;
+    text-decoration: none;
+
+    &:visited {
+        color: darken($link-color, 15%);
+    }
+
+    &:hover {
+        color: $text-color;
+        text-decoration: underline;
+    }
+}
+
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    border-left: .4em solid $theme-color;
+    padding-left: $spacing-unit / 2;
+    font-size: 1.2em;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+    border: .1em solid lighten($theme-color, 30%);
+    border-radius: .25em;
+    background-color: $code-color;
+    font-family: $code-font-family;
+}
+
+code {
+    padding: .1em .5em;
+}
+
+pre {
+    padding: .6em 1em;
+    overflow-x: scroll;
+
+    > code {
+        border: 0;
+        padding: 0;
+    }
+}
+
+
+
+/**
+ * Wrapper
+ */
+.wrapper {
+    max-width: 45em;
+    margin: 0 auto;
+    padding: 0 $spacing-unit;
+    @extend %clearfix;
+}
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+
+/**
+ * Icons
+ */
+.source-link {
+    text-align: right;
+
+    a {
+        &:before {
+            content: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGJhc2VQcm9maWxlPSJ0aW55IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik03Ljk5OSwwLjQzMWMtNC4yODUsMC03Ljc2LDMuNDc0LTcuNzYsNy43NjEgYzAsMy40MjgsMi4yMjMsNi4zMzcsNS4zMDcsNy4zNjNjMC4zODgsMC4wNzEsMC41My0wLjE2OCwwLjUzLTAuMzc0YzAtMC4xODQtMC4wMDctMC42NzItMC4wMS0xLjMyIGMtMi4xNTksMC40NjktMi42MTQtMS4wNC0yLjYxNC0xLjA0Yy0wLjM1My0wLjg5Ni0wLjg2Mi0xLjEzNS0wLjg2Mi0xLjEzNWMtMC43MDUtMC40ODEsMC4wNTMtMC40NzIsMC4wNTMtMC40NzIgYzAuNzc5LDAuMDU1LDEuMTg5LDAuOCwxLjE4OSwwLjhjMC42OTIsMS4xODYsMS44MTYsMC44NDMsMi4yNTgsMC42NDVjMC4wNzEtMC41MDIsMC4yNzEtMC44NDMsMC40OTMtMS4wMzcgQzQuODYsMTEuNDI1LDMuMDQ5LDEwLjc2LDMuMDQ5LDcuNzg2YzAtMC44NDcsMC4zMDItMS41NCwwLjc5OS0yLjA4MkMzLjc2OCw1LjUwNywzLjUwMSw0LjcxOCwzLjkyNCwzLjY1IGMwLDAsMC42NTItMC4yMDksMi4xMzQsMC43OTZDNi42NzcsNC4yNzMsNy4zNCw0LjE4Nyw4LDQuMTg0YzAuNjU5LDAuMDAzLDEuMzIzLDAuMDg5LDEuOTQzLDAuMjYxIGMxLjQ4Mi0xLjAwNCwyLjEzMi0wLjc5NiwyLjEzMi0wLjc5NmMwLjQyMywxLjA2OCwwLjE1NywxLjg1NywwLjA3NywyLjA1NGMwLjQ5NywwLjU0MiwwLjc5OCwxLjIzNSwwLjc5OCwyLjA4MiBjMCwyLjk4MS0xLjgxNCwzLjYzNy0zLjU0MywzLjgyOWMwLjI3OSwwLjI0LDAuNTI3LDAuNzEzLDAuNTI3LDEuNDM3YzAsMS4wMzctMC4wMSwxLjg3NC0wLjAxLDIuMTI5IGMwLDAuMjA4LDAuMTQsMC40NDksMC41MzQsMC4zNzNjMy4wODEtMS4wMjgsNS4zMDItMy45MzUsNS4zMDItNy4zNjJDMTUuNzYsMy45MDYsMTIuMjg1LDAuNDMxLDcuOTk5LDAuNDMxeiIvPjwvc3ZnPg==);
+            display: inline-block;
+            height: 1.2em;
+            margin: 0 .2em 0 0;
+            vertical-align: text-top;
+            width: 1.2em;
+        }
+    }
+
+    h1 + & {
+        position: relative;
+        top: -($spacing-unit / 2);
+
+        @media screen and (min-width: 38em) {
+            margin: -($base-line-height * $h1-font-size - ($spacing-unit / 2)) 0 0;
+        }
+    }
+}

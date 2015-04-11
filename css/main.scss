@@ -1,0 +1,33 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400|Ubuntu+Mono);
+
+// Our variables
+$base-font-family: "Ubuntu", sans-serif;
+$code-font-family: "Ubuntu Mono", sans-serif;
+$base-line-height: 1.5;
+
+$h1-font-size:     2em;
+$h2-font-size:     1.5em;
+$h3-font-size:     1.2em;
+$h4-font-size:     1em;
+
+$spacing-unit:     2em;
+
+$theme-color:      hsl(10, 80%, 50%);
+$background-color: darken($theme-color, 20%);
+$code-color:       darken($theme-color, 40%);
+$text-color:       lighten($theme-color, 40%);
+$heading-color:    lighten($theme-color, 50%);
+$link-color:       lighten($theme-color, 20%);
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;

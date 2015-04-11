@@ -1,0 +1,7 @@
+encoding: utf-8
+timezone: UTC
+safe: true
+kramdown:
+  input: GFM
+
+source_url: https://github.com/rasenplanscher/angular-template-bundle
