@@ -71,8 +71,8 @@ With this in place, there are three phases to template requests:
 This works on the `$templateRequest` service. So if you use a custom template strategy that eshews that service,
 this will not work as a drop-in solution.
 
-### View the Code, Luke
-For more in-depth knowledge, **peruse the code** – it's quite simple really, and extensively documented =)
+### Use the Source, Luke
+For more in-depth knowledge, **peruse the source** – it's quite simple really, and extensively documented =)
 
 ### templates.json
 The templates bundle file is basically a key/value store with the same data as you want the `$templateCache` to have. Keys are the templates' URLs, values their respective HTML sources. It should look something like this:
