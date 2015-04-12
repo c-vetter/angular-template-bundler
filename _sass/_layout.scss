@@ -14,3 +14,91 @@
 .page-content {
     padding: $spacing-unit 0;
 }
+
+
+
+/**
+ * Source links
+ */
+.source-link {
+    text-align: right;
+
+    a {
+        &:before {
+            content: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGJhc2VQcm9maWxlPSJ0aW55IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik03Ljk5OSwwLjQzMWMtNC4yODUsMC03Ljc2LDMuNDc0LTcuNzYsNy43NjEgYzAsMy40MjgsMi4yMjMsNi4zMzcsNS4zMDcsNy4zNjNjMC4zODgsMC4wNzEsMC41My0wLjE2OCwwLjUzLTAuMzc0YzAtMC4xODQtMC4wMDctMC42NzItMC4wMS0xLjMyIGMtMi4xNTksMC40NjktMi42MTQtMS4wNC0yLjYxNC0xLjA0Yy0wLjM1My0wLjg5Ni0wLjg2Mi0xLjEzNS0wLjg2Mi0xLjEzNWMtMC43MDUtMC40ODEsMC4wNTMtMC40NzIsMC4wNTMtMC40NzIgYzAuNzc5LDAuMDU1LDEuMTg5LDAuOCwxLjE4OSwwLjhjMC42OTIsMS4xODYsMS44MTYsMC44NDMsMi4yNTgsMC42NDVjMC4wNzEtMC41MDIsMC4yNzEtMC44NDMsMC40OTMtMS4wMzcgQzQuODYsMTEuNDI1LDMuMDQ5LDEwLjc2LDMuMDQ5LDcuNzg2YzAtMC44NDcsMC4zMDItMS41NCwwLjc5OS0yLjA4MkMzLjc2OCw1LjUwNywzLjUwMSw0LjcxOCwzLjkyNCwzLjY1IGMwLDAsMC42NTItMC4yMDksMi4xMzQsMC43OTZDNi42NzcsNC4yNzMsNy4zNCw0LjE4Nyw4LDQuMTg0YzAuNjU5LDAuMDAzLDEuMzIzLDAuMDg5LDEuOTQzLDAuMjYxIGMxLjQ4Mi0xLjAwNCwyLjEzMi0wLjc5NiwyLjEzMi0wLjc5NmMwLjQyMywxLjA2OCwwLjE1NywxLjg1NywwLjA3NywyLjA1NGMwLjQ5NywwLjU0MiwwLjc5OCwxLjIzNSwwLjc5OCwyLjA4MiBjMCwyLjk4MS0xLjgxNCwzLjYzNy0zLjU0MywzLjgyOWMwLjI3OSwwLjI0LDAuNTI3LDAuNzEzLDAuNTI3LDEuNDM3YzAsMS4wMzctMC4wMSwxLjg3NC0wLjAxLDIuMTI5IGMwLDAuMjA4LDAuMTQsMC40NDksMC41MzQsMC4zNzNjMy4wODEtMS4wMjgsNS4zMDItMy45MzUsNS4zMDItNy4zNjJDMTUuNzYsMy45MDYsMTIuMjg1LDAuNDMxLDcuOTk5LDAuNDMxeiIvPjwvc3ZnPg==);
+            display: inline-block;
+            height: 1.2em;
+            margin: 0 .2em 0 0;
+            vertical-align: text-top;
+            width: 1.2em;
+        }
+    }
+
+    h1 + & {
+        position: relative;
+        top: -($spacing-unit / 2);
+    }
+}
+
+
+
+/**
+ * Logo-Time!
+ */
+@media screen {
+    @media (min-width: 15em) {
+        h1 {
+            &:before {
+                content: url(/logo.svg);
+            }
+        }
+
+        @media (max-width: 35em) {
+            h1 {
+                text-align: center;
+
+                &:before {
+                    display: block;
+                    height: 4em;
+                    margin: 0 auto .5em;
+                    width: 4em;
+                }
+            }
+
+            .source-link {
+                text-align: center;
+            }
+        }
+    }
+
+    @media (min-width: 35em) {
+        h1 {
+            &:before {
+                display: inline-block;
+                height: 2em;
+                margin: 0 .5em 0 0;
+                vertical-align: middle;
+                width: 2em;
+            }
+        }
+    }
+
+    @media (min-width: 43em) {
+        h1 + .source-link {
+            margin: -2.6666em 0 1em;
+        }
+    }
+
+    @media (min-width: 46em) {
+        h1 {
+            &:before {
+                height: 3em;
+                width: 3em;
+            }
+
+            & + .source-link {
+                margin: -3.6666em 0 2em;
+            }
+        }
+    }
+}
