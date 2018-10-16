@@ -18,11 +18,11 @@ $h4-font-size:     1em;
 $spacing-unit:     2em;
 
 $theme-color:      hsl(10, 80%, 50%);
-$background-color: darken($theme-color, 20%);
+$background-color: darken($theme-color, 42%);
 $code-color:       darken($theme-color, 40%);
 $text-color:       lighten($theme-color, 40%);
 $heading-color:    lighten($theme-color, 50%);
-$link-color:       lighten($theme-color, 20%);
+$link-color:       darken($theme-color, 8%);
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)

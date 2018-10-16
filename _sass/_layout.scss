@@ -83,21 +83,11 @@
         }
     }
 
-    @media (min-width: 43em) {
-        h1 + .source-link {
-            margin: -2.6666em 0 1em;
-        }
-    }
-
     @media (min-width: 46em) {
         h1 {
             &:before {
                 height: 3em;
                 width: 3em;
-            }
-
-            & + .source-link {
-                margin: -3.6666em 0 2em;
             }
         }
     }
